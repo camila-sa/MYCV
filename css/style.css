@@ -1,0 +1,481 @@
+@charset "UTF-8";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div {
+    padding: 10px;
+}
+
+
+/* Estrutura - Inicio */
+
+header {
+    grid-area: cabecalho;
+    /*background: linear-gradient(to right,rgb(179, 166, 171),rgb(219, 219, 238)); */
+    background-color: rgb(6, 167, 99);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+body {
+    background-color: #e5e5e5;
+    /*background: linear-gradient(to right,rgb(179, 166, 171),rgb(219, 219, 238)); */
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 'cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho' 'perfprof perfprof perfprof resquali resquali resquali' 'h2_expprof h2_expprof h2_expprof h2_expprof h2_expprof h2_expprof' 'conteudo conteudo conteudo conteudo conteudo conteudo' 'h2_formaca h2_formaca h2_formaca h2_formaca h2_formaca h2_formaca' 'formaca formaca  formaca formaca formaca formaca' 'h2_certifi h2_certifi h2_certifi h2_certifi h2_certifi h2_certifi' 'certifi certifi certifi certifi certifi certifi' 'h2_formcom h2_formcom h2_formcom h2_formcom h2_formcom h2_formcom' 'formcom formcom formcom formcom formcom formcom';
+    font-family: 'Poppins', sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 10px;
+}
+
+nav {
+    grid-area: navegacao;
+}
+
+main {
+    grid-area: conteudo;
+}
+
+footer {
+    grid-area: rodape;
+}
+
+.perfprof {
+    grid-area: perfprof;
+}
+
+.resquali {
+    grid-area: resquali;
+}
+
+.formaca {
+    grid-area: formaca;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.certifi {
+    grid-area: certifi;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.formcom {
+    grid-area: formcom;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.geral {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+/* Estrutura - Fim */
+
+
+/*Conteudo Educação - Inicio*/
+
+.conteudo-educacao {
+    background-color: white;
+    width: 290px;
+    height: auto;
+    margin: 10px;
+    box-shadow: 0px 4px 2px 0px rgb(25, 118, 210);
+    border-radius: 10px;
+}
+
+.periodo {
+    background-color: rgb(25, 118, 210);
+    text-align: center;
+    color: white;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.titulo_exp_prof {
+    background-color: rgb(25, 118, 210);
+    text-align: center;
+    color: white;
+    width: auto;
+    border-radius: 10px;
+}
+
+.li-especialidade {
+    list-style: none;
+}
+
+.especialidade>span {
+    font-size: 14px;
+}
+
+
+/*Conteudo Educação - Fim*/
+
+
+/*Titulos Personalizados - Inicio */
+
+.h2_certifi {
+    grid-area: h2_certifi;
+    text-align: left;
+    margin: 10px;
+}
+
+.h2_formaca {
+    grid-area: h2_formaca;
+    text-align: left;
+    margin: 10px;
+}
+
+.h2_formcom {
+    grid-area: h2_formcom;
+    text-align: left;
+    margin: 10px;
+}
+
+.h2_expprof {
+    grid-area: h2_expprof;
+    text-align: left;
+    margin: 10px;
+}
+
+
+/*Titulos Personalizados - Fim */
+
+
+/*Outros Personalizados - Inicio */
+
+.titulo {
+    text-align: left;
+    margin-left: 20px;
+}
+
+p {
+    text-align: left;
+}
+
+.jusfify {
+    text-align: left;
+}
+
+.recuo {
+    text-indent: 2em;
+}
+
+li {
+    list-style-type: none;
+}
+
+.li_modelo {
+    list-style-type:square;
+}
+
+.info_header {
+    text-align: center;
+}
+
+.ocultar {
+    display: none;
+}
+
+
+/*Outros Personalizados - Fim */
+
+@media(max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        grid-template-areas: 'cabecalho' 'perfprof' 'resquali' 'h2_expprof' 'conteudo' 'h2_formaca' 'formaca' 'h2_certifi' 'certifi' 'h2_formcom' 'formcom';
+    }
+    .dados_pessoais {
+        font-size: small;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    body {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+}
+
+
+/* A linha temporal real (a régua vertical) */
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* A linha temporal real (a régua vertical)  */
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: rgb(155, 212, 189);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+
+/* Container em torno do conteúdo */
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+
+/* Os círculos na linha do tempo */
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -12px;
+    background-color: rgb(6, 167, 99);
+    border: 4px solid rgb(6, 167, 99);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+/* Colocar o container a esquerda */
+
+.left {
+    left: 0;
+}
+
+
+/* Colocar o container a direita */
+
+.right {
+    left: 50%;
+}
+
+
+/* Adicionar setas ao container da esquerda  (apontando para a direita) */
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+
+/*Adicionar setas ao container da direita (apontando para a esquerda) */
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+
+/* Fixar o círculo para containers  do lado direito */
+
+.right::after {
+    left: -12px;
+}
+
+
+/* O conteudo atual */
+
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+}
+
+
+/* Media queries - Linha temporal de resposta em telas com menos de 600px de largura */
+
+@media screen and (max-width: 600px) {
+    /* Colocar a Linha temporal à esquerda */
+    .timeline::after {
+        left: 33px;
+    }
+    /* Container de largura total */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    /* Certificando de que todas as setas estão a apontar para a esquerda */
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+    /* Certificando de que todos os círculos estão no mesmo local */
+    .left::after,
+    .right::after {
+        left: 12px;
+    }
+    /* Fazer com que todos os Containers certos se comportem como os da esquerda */
+    .right {
+        left: 0%;
+    }
+}
+
+.voltar-ao-topo {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    padding: 1em;
+    display: none;
+}
+
+.voltar-ao-topo:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+/*Impressao */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        text-shadow: none !important;
+        filter: none !important;
+        -ms-filter: none !important;
+    }
+    body {
+        margin-top: 30px;
+        padding: 8px;
+        border: solid;
+        line-height: 1.4em;
+        font: 12pt sans-serif, "Times New Roman", Times, serif;
+    }
+    header {
+        display: flex;
+        flex-direction: row;
+    }
+    @page {
+        margin: 0.5cm;
+        size: A4 portrait; 
+                  
+    }
+
+    nav,
+    footer,
+    video,
+    audio,
+    object,
+    embed {
+        display: none;
+    }
+    body {
+        color: #000;
+    }
+    h1 {
+        font-size: 24pt;
+    }
+    h2 {
+        font-size: 14pt;
+    }
+    h3 {
+        font-size: 14pt;
+    }
+    p {
+        widows: 3;
+    }
+    p {
+        orphans: 3;
+    }
+    .page-break {
+        page-break-before: always;
+    }
+    .ocultar {
+        display: flex;
+    }
+    .conteudo-educacao {
+        box-shadow: 0px 4px 2px 2px black;
+    }
+    .fa.fa-plus-circle,
+    .fa.fa-minus-circle {
+        display: none;
+    }
+    .left,
+    .right {
+        left: 0;
+    }
+    .timeline {
+        display: grid;
+    }
+    .container {
+        width: auto;
+    }
+    .left::after,
+    .left::before,
+    .right::after,
+    .right::before,
+    .timeline::after,
+    .container::after,
+    .container::before {
+        display: none;
+    }
+    .formcom {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+       
+    }
+    .imprimir {
+        display: none;
+    }
+
+    
+}
+
+
