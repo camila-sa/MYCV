@@ -474,8 +474,17 @@ li {
     .imprimir {
         display: none;
     }
-
+    .tema{
+        display: none;
+    }
     
 }
+
+/*Testando tema Escuro*/
+
+
+
+
+
 
 

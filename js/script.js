@@ -60,3 +60,10 @@ $(document).ready(function() {
         $('html, body').animate({ scrollTop: 0 }, 1500);
     })
 });
+
+
+
+let excluir = document.querySelector('#excluir');
+        excluir.addEventListener('click', function () {  
+            $('body').toggleClass('tema_dark');         
+          });
